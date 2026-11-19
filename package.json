@@ -1,0 +1,46 @@
+{
+  "name": "notetrail",
+  "version": "0.1.0-desktop.17",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "24.22.1"
+  },
+  "packageManager": "pnpm@11.25.0",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "stop": "node scripts/stop.mjs",
+    "maintenance": "node scripts/maintenance.mjs",
+    "check": "pnpm desktop:build && node --test tests/test_*.mjs",
+    "test:app": "node --test tests/test_app.mjs tests/test_session.mjs tests/test_contracts.mjs tests/test_storage.mjs tests/test_credentials.mjs tests/test_vaults.mjs tests/test_refresh.mjs tests/test_ingestions.mjs tests/test_conversions.mjs tests/test_intake_completion.mjs tests/test_vault_tools.mjs tests/test_model_runtime.mjs tests/test_model_probe.mjs tests/test_worker.mjs tests/test_questions.mjs tests/test_memories.mjs",
+    "verify:pi": "node scripts/verify_pi.mjs",
+    "test:pi": "node --test tests/test_verify_pi.mjs",
+    "verify:context": "node scripts/verify_pi_context.mjs",
+    "test:context": "node --test tests/test_pi_context.mjs",
+    "verify:deepseek": "node scripts/verify_deepseek.mjs",
+    "test:deepseek": "node --test tests/test_deepseek.mjs",
+    "verify:storage": "node scripts/verify_storage.mjs",
+    "test:storage": "node --test tests/test_verify_storage.mjs",
+    "verify:limits": "node scripts/verify_model_limits.mjs",
+    "test:limits": "node --test tests/test_model_budget.mjs",
+    "desktop:build": "node scripts/build.mjs && node scripts/build-desktop.mjs",
+    "desktop": "node scripts/desktop.mjs",
+    "test:desktop": "node --test tests/test_desktop*.mjs",
+    "desktop:package": "node scripts/package-desktop.mjs"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-ai": "1.5.2",
+    "@earendil-works/pi-coding-agent": "1.5.2",
+    "@types/node": "24.10.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "better-sqlite3": "13.1.1",
+    "fastify": "5.12.8",
+    "lightningcss": "1.33.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "rolldown": "1.2.19",
+    "typescript": "6.0.3"
+  }
+}

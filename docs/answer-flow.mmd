@@ -1,0 +1,21 @@
+---
+config:
+  htmlLabels: false
+  deterministicIds: true
+  deterministicIDSeed: notetrail-answer-flow
+  fontFamily: 'system-ui, "PingFang SC", "Microsoft YaHei", sans-serif'
+  flowchart:
+    htmlLabels: false
+    diagramPadding: 16
+    useMaxWidth: false
+---
+%% Export using Mermaid 11.12.0 with native SVG labels.
+flowchart TB
+    ask["在 NoteTrail 提问"] --> request["本机服务"]
+    request -->|问题与相关上下文| model["你配置的云端大模型"]
+    model -.->|需要资料或搜索时| tools["本机服务执行工具"]
+    tools <-->|查阅相关资料| vault["当前 Obsidian 知识库"]
+    tools <-.->|"按需联网<br/>搜索词经检查后发送"| web["网页搜索"]
+    tools -.->|资料片段或网页摘录| model
+    model -->|经本机返回回答| answer["显示回答与出处"]
+    answer -->|点击资料引用| original["在本机定位原文"]

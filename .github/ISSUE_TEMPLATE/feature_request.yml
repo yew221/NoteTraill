@@ -1,0 +1,21 @@
+name: 功能建议
+description: 说明你想完成的事情、目前的困难，以及怎样算改进成功。
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **这条 Issue 会公开。** 请用虚构案例描述需求，去掉 API 密钥、一次性连接链接、私人知识库、个人路径、完整对话和原始日志。若建议源于疑似泄露或越权，请退出此表单，按仓库根目录的 `SECURITY.md` 私下报告。
+  - type: textarea
+    id: scenario
+    attributes:
+      label: 使用场景与困难
+      description: 你想完成什么事情，目前卡在哪一步？如果已有临时做法，可以一并说明。
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: 期望的变化
+      description: 描述你希望看到的结果，以及怎样判断这个改进解决了问题。
+    validations:
+      required: true

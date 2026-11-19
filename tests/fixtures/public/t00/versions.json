@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "bundle_version": "t00-2026-11-12-v1-public.1",
+  "classification": "public_synthetic",
+  "prepared_date": "2026-11-12",
+  "status": "prepared; application tests not run",
+  "scope": "固定版本以文件SHA-256为准；mtime不是生效日期。清单自身不递归计算自身指纹。",
+  "files": [
+    {
+      "id": "F01",
+      "path": "inputs/policies/rule-v1.md",
+      "sample_group": "S-03",
+      "role": "input",
+      "bytes": 367,
+      "sha256": "87600ed38beb2fe34401e36141cb4df42e79d9ba876fb9d97b6921d8e68e493a",
+      "version": "sha256:87600ed38beb2fe34401e36141cb4df42e79d9ba876fb9d97b6921d8e68e493a",
+      "description": "合成旧版规则，日期明确",
+      "application_test_status": "not_run"
+    },
+    {
+      "id": "F02",
+      "path": "inputs/policies/rule-v2.md",
+      "sample_group": "S-03",
+      "role": "input",
+      "bytes": 376,
+      "sha256": "7ff0fb1a38b68b2bab5198a3b0d8d5c99cdd3d255f835a3fe23c685420e185ab",
+      "version": "sha256:7ff0fb1a38b68b2bab5198a3b0d8d5c99cdd3d255f835a3fe23c685420e185ab",
+      "description": "合成新版规则，日期明确",
+      "application_test_status": "not_run"
+    },
+    {
+      "id": "F03",
+      "path": "inputs/policies/undated-a.md",
+      "sample_group": "S-03",
+      "role": "input",
+      "bytes": 275,
+      "sha256": "a7714d141eba7d8f139aefd1e2688a85d62e66817e7f776d1ee56e47e399b2c1",
+      "version": "sha256:a7714d141eba7d8f139aefd1e2688a85d62e66817e7f776d1ee56e47e399b2c1",
+      "description": "合成冲突规则，日期未知",
+      "application_test_status": "not_run"
+    },
+    {
+      "id": "F04",
+      "path": "inputs/policies/undated-b.md",
+      "sample_group": "S-03",
+      "role": "input",
+      "bytes": 275,
+      "sha256": "06e2f8e3fbb4ff3ad7cde7672db32d32c1d9106d611b36c9ffecaafc5d0bfe2c",
+      "version": "sha256:06e2f8e3fbb4ff3ad7cde7672db32d32c1d9106d611b36c9ffecaafc5d0bfe2c",
+      "description": "合成冲突规则，日期未知",
+      "application_test_status": "not_run"
+    },
+    {
+      "id": "F05",
+      "path": "inputs/web/intake.html",
+      "sample_group": "S-05",
+      "role": "input",
+      "bytes": 473,
+      "sha256": "34ea8364837a5e2bf3ec9befa6be7cca19c449613fe8502878ca6a0a425d9463",
+      "version": "sha256:34ea8364837a5e2bf3ec9befa6be7cca19c449613fe8502878ca6a0a425d9463",
+      "description": "合成HTML正文",
+      "application_test_status": "not_run"
+    },
+    {
+      "id": "F06",
+      "path": "inputs/chat/handover.md",
+      "sample_group": "S-05/S-09",
+      "role": "input",
+      "bytes": 393,
+      "sha256": "dab0279bc657dc835e37add494e5f4af0d64c2cc8dbd09dccf81af5ae2ca635b",
+      "version": "sha256:dab0279bc657dc835e37add494e5f4af0d64c2cc8dbd09dccf81af5ae2ca635b",
+      "description": "虚构聊天",
+      "application_test_status": "not_run"
+    },
+    {
+      "id": "F07",
+      "path": "inputs/formats/inspection.pdf",
+      "sample_group": "S-06",
+      "role": "input",
+      "bytes": 58659,
+      "sha256": "d9baadd3d2dffa2a92fe42897685c2336e5e921efdf0a1cdc7f9ce9fb222f4e9",
+      "version": "sha256:d9baadd3d2dffa2a92fe42897685c2336e5e921efdf0a1cdc7f9ce9fb222f4e9",
+      "description": "两页中文文字PDF，含表格",
+      "application_test_status": "not_run"
+    },
+    {
+      "id": "F08",
+      "path": "inputs/formats/inspection.docx",
+      "sample_group": "S-06",
+      "role": "input",
+      "bytes": 37343,
+      "sha256": "b7bd30e7178512f8a5e4c2c5a6348df906da79670649b98a4c45e4f5b84a61ed",
+      "version": "sha256:b7bd30e7178512f8a5e4c2c5a6348df906da79670649b98a4c45e4f5b84a61ed",
+      "description": "OOXML文档，含标题和表格",
+      "application_test_status": "not_run"
+    },
+    {
+      "id": "F09",
+      "path": "inputs/formats/stock.xlsx",
+      "sample_group": "S-06",
+      "role": "input",
+      "bytes": 4916,
+      "sha256": "9c8428411cddf74e1640b8642a684b22bd6b9a5cccef602407e5f6607508c709",
+      "version": "sha256:9c8428411cddf74e1640b8642a684b22bd6b9a5cccef602407e5f6607508c709",
+      "description": "OOXML工作簿，东区/西区两表",
+      "application_test_status": "not_run"
+    },
+    {
+      "id": "F10",
+      "path": "inputs/formats/stock.xls",
+      "sample_group": "S-06",
+      "role": "input",
+      "bytes": 7680,
+      "sha256": "8bc5b85d2414a59955be5a17c6313a52546cd1984970a7854afb4f49eb4b4d6a",
+      "version": "sha256:8bc5b85d2414a59955be5a17c6313a52546cd1984970a7854afb4f49eb4b4d6a",
+      "description": "Excel 97真实旧式二进制，两表",
+      "application_test_status": "not_run"
+    },
+    {
+      "id": "F11",
+      "path": "inputs/formats/scanned.pdf",
+      "sample_group": "S-07",
+      "role": "input",
+      "bytes": 45623,
+      "sha256": "b88ae0c966da5c4bba05548e83c9ed870126c303ca81c883494f7b8d46c6a515",
+      "version": "sha256:b88ae0c966da5c4bba05548e83c9ed870126c303ca81c883494f7b8d46c6a515",
+      "description": "一页图像，无文字层",
+      "application_test_status": "not_run"
+    },
+    {
+      "id": "F12",
+      "path": "inputs/formats/inspection.doc",
+      "sample_group": "S-07",
+      "role": "input",
+      "bytes": 19968,
+      "sha256": "5166db09c07290d0dc1f592e54e3b19875a74d93b84f569f109061471a1b3263",
+      "version": "sha256:5166db09c07290d0dc1f592e54e3b19875a74d93b84f569f109061471a1b3263",
+      "description": "Word 97真实旧式二进制",
+      "application_test_status": "not_run"
+    },
+    {
+      "id": "F13",
+      "path": "inputs/formats/corrupt.docx",
+      "sample_group": "S-07",
+      "role": "input",
+      "bytes": 128,
+      "sha256": "0868fae4012c64cfdecc72071f116f1fee0ef307f615bf6f4ece9711ae55c2ef",
+      "version": "sha256:0868fae4012c64cfdecc72071f116f1fee0ef307f615bf6f4ece9711ae55c2ef",
+      "description": "故意截断为128字节的损坏ZIP",
+      "application_test_status": "not_run"
+    },
+    {
+      "id": "F14",
+      "path": "inputs/formats/mixed.pdf",
+      "sample_group": "S-07",
+      "role": "input",
+      "bytes": 89688,
+      "sha256": "910ff72f9ca353ed5571d4b68158a887138cacb5e1b259f28a67d0814a360f7d",
+      "version": "sha256:910ff72f9ca353ed5571d4b68158a887138cacb5e1b259f28a67d0814a360f7d",
+      "description": "文字第一页，纯图像第二页",
+      "application_test_status": "not_run"
+    },
+    {
+      "id": "F15",
+      "path": "inputs/lifecycle/v1/inspection.md",
+      "sample_group": "S-08",
+      "role": "input",
+      "bytes": 179,
+      "sha256": "f07f7c8da5feeb35019da9a1c9b494b1b13ba6399510be8f0944795256bac744",
+      "version": "sha256:f07f7c8da5feeb35019da9a1c9b494b1b13ba6399510be8f0944795256bac744",
+      "description": "变更前状态",
+      "application_test_status": "not_run"
+    },
+    {
+      "id": "F16",
+      "path": "inputs/lifecycle/v2/inspection.md",
+      "sample_group": "S-08",
+      "role": "input",
+      "bytes": 212,
+      "sha256": "cf1e704d0411b6870b5b79c559d6bc5a8fcf6b6472d8f962cf888ca965b2c503",
+      "version": "sha256:cf1e704d0411b6870b5b79c559d6bc5a8fcf6b6472d8f962cf888ca965b2c503",
+      "description": "变更后状态",
+      "application_test_status": "not_run"
+    },
+    {
+      "id": "F17",
+      "path": "inputs/lifecycle/renamed/weekly-inspection.md",
+      "sample_group": "S-08",
+      "role": "input",
+      "bytes": 212,
+      "sha256": "cf1e704d0411b6870b5b79c559d6bc5a8fcf6b6472d8f962cf888ca965b2c503",
+      "version": "sha256:cf1e704d0411b6870b5b79c559d6bc5a8fcf6b6472d8f962cf888ca965b2c503",
+      "description": "内容不变、路径变更状态",
+      "application_test_status": "not_run"
+    },
+    {
+      "id": "C01",
+      "path": "http-responses.json",
+      "sample_group": "S-05",
+      "role": "control_do_not_ingest",
+      "bytes": 817,
+      "sha256": "ab7cfde4d52c0c5e6404887710b9f2af8c11cfdc397d992cc205811bd19ea3c5",
+      "version": "sha256:ab7cfde4d52c0c5e6404887710b9f2af8c11cfdc397d992cc205811bd19ea3c5",
+      "description": "静态失败响应，不进入资料库",
+      "application_test_status": "not_run"
+    },
+    {
+      "id": "C02",
+      "path": "conversations.json",
+      "sample_group": "S-08/S-09",
+      "role": "control_do_not_ingest",
+      "bytes": 1934,
+      "sha256": "fc3b9b00786c00409b3d8b6142fb607f56381f9f5410919117b7e91684675a56",
+      "version": "sha256:fc3b9b00786c00409b3d8b6142fb607f56381f9f5410919117b7e91684675a56",
+      "description": "合成旧回答与保存选择，不整份入库",
+      "application_test_status": "not_run"
+    },
+    {
+      "id": "C03",
+      "path": "EXPECTED.md",
+      "sample_group": "all",
+      "role": "control_do_not_ingest",
+      "bytes": 5684,
+      "sha256": "7b79f48a4c8c612c41c48d925c74cff9a4167e692c73a9b9c35f048d081f1910",
+      "version": "sha256:7b79f48a4c8c612c41c48d925c74cff9a4167e692c73a9b9c35f048d081f1910",
+      "description": "预写评判标准，禁止作为检索资料",
+      "application_test_status": "not_run"
+    },
+    {
+      "id": "C04",
+      "path": "SCENARIOS.md",
+      "sample_group": "all",
+      "role": "control_do_not_ingest",
+      "bytes": 857,
+      "sha256": "94e41dc3b1cd01d248cfbdf4a94535fdbf9777a5a4eb64416c29c54e34d00618",
+      "version": "sha256:94e41dc3b1cd01d248cfbdf4a94535fdbf9777a5a4eb64416c29c54e34d00618",
+      "description": "未执行的状态与边界步骤",
+      "application_test_status": "not_run"
+    },
+    {
+      "id": "C05",
+      "path": "README.md",
+      "sample_group": "all",
+      "role": "control_do_not_ingest",
+      "bytes": 678,
+      "sha256": "eec62d3de0df2ef807fa1673c3a312d55b2e33b33964abb63476b78f1b6e7252",
+      "version": "sha256:eec62d3de0df2ef807fa1673c3a312d55b2e33b33964abb63476b78f1b6e7252",
+      "description": "样本使用说明",
+      "application_test_status": "not_run"
+    }
+  ]
+}

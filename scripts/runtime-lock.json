@@ -1,0 +1,28 @@
+{
+  "format": "notetrail-runtime-v1",
+  "support": { "platform": "darwin", "arch": "arm64", "macOS": "26.6" },
+  "node": {
+    "version": "24.22.1",
+    "url": "https://registry.npmjs.org/node-bin-darwin-arm64/-/node-bin-darwin-arm64-24.22.1.tgz",
+    "sha256": "65ea8a1fcf52b3de4a5b05adfba8817b5d08e89c1b2167944824c15cce4f766f",
+    "officialArchiveSha256": "654ba79de6155647e22321932b45f2a1ccb705976cc337c9b8e278beb085a628",
+    "binarySha256": "6f32069480ec14d52b6d7b1f3c7124cfbbc46203abf5ddf5c65b127435f3f329",
+    "licenseSha256": "5888dbb9a1d2b18f2c3e6c5f6af1b39de658372b402a0577b002777f14c62ace"
+  },
+  "uv": {
+    "version": "0.13.7",
+    "url": "https://github.com/astral-sh/uv/releases/download/0.13.7/uv-aarch64-apple-darwin.tar.gz",
+    "sha256": "81b811b57e4624df7ed3aac148e0359100d9962f3d9dce00aec533dc2e086731"
+  },
+  "python": {
+    "version": "3.12.16",
+    "url": "https://github.com/astral-sh/python-build-standalone/releases/download/20261026/cpython-3.12.16%2B20261026-aarch64-apple-darwin-install_only_stripped.tar.gz",
+    "sha256": "353d5f1b4fd2715e7053f12f068435d5bbad16b91e057006b5d01e0925709a7e"
+  },
+  "rg": {
+    "version": "15.2.0",
+    "url": "https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-aarch64-apple-darwin.tar.gz",
+    "sha256": "3750b2e93f37e0c692657da574d7019a101c0084da05a790c83fd335bad973e4"
+  },
+  "jsInstallSha256": "ad6a953cb972297f68f477972354bfa1c635aede3e815a8591bcbe59a69023da"
+}

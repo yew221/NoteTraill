@@ -1,0 +1,28 @@
+name: 普通故障
+description: 用可公开的虚构资料说明安装、问答、导入或界面中的异常。
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **这条 Issue 会公开。** 如果怀疑资料泄露、越权访问，或不确定是否涉及隐私，请退出此表单，按仓库根目录的 `SECURITY.md` 私下报告。请勿贴 API 密钥、启动凭据、私人知识库、个人路径、完整对话或原始日志。
+  - type: input
+    id: environment
+    attributes:
+      label: 版本与环境
+      description: 填写 NoteTrail 版本、系统版本和芯片。
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: 怎样遇到的问题
+      description: 用公开样例或自建的虚构文件写下最少操作。偶发问题可注明发生时的操作和频率。
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: 预期与实际结果
+      description: 写明你原本期待的结果、实际看到的现象，以及出现时的错误代码（如有）。
+    validations:
+      required: true

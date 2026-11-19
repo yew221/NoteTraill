@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "classification": "public_synthetic",
+  "asOf": "2026-11-16",
+  "sourceId": "SL-SCHEDULE-01",
+  "oldFixture": "F15",
+  "newFixture": "F16",
+  "oldFact": "每周二 09:00",
+  "newFact": "每周四 10:00",
+  "question": "例行巡检安排在每周什么时候？",
+  "followup": "现在这个安排是什么？请重新核对当前资料。",
+  "keepMemory": "回答请用简短中文。",
+  "removeMemory": "称呼我为松岚测试员。",
+  "removedMemoryMarker": "松岚测试员",
+  "oldAnswerMarker": "T01C_OLD_ANSWER",
+  "summaryMarker": "T01C_OLD_SUMMARY",
+  "noEvidenceAnswer": "当前没有可用的巡检依据。",
+  "cases": [
+    { "id": "changed", "label": "原件更新", "expectedFact": "每周四 10:00", "reason": "source_version_changed" },
+    { "id": "excluded", "label": "范围撤销", "expectedFact": null, "reason": "scope_changed" },
+    { "id": "missing", "label": "原件删除且派生件残留", "expectedFact": null, "reason": "source_unavailable" },
+    { "id": "memory-removed", "label": "偏好删除", "expectedFact": "每周二 09:00", "reason": "memory_changed" }
+  ]
+}

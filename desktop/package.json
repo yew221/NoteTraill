@@ -1,0 +1,11 @@
+{
+  "name": "notetrail-desktop",
+  "version": "0.1.0-desktop.17",
+  "private": true,
+  "license": "MIT",
+  "main": "../src/desktop/main.mjs",
+  "packageManager": "pnpm@11.25.0",
+  "devDependencies": {
+    "electron": "45.3.2"
+  }
+}

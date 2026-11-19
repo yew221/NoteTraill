@@ -1,0 +1,27 @@
+{
+  "project": "pi-gui",
+  "repository": "https://github.com/minghinmatthewlam/pi-gui",
+  "tag": "v1.0.1",
+  "commit": "dd5708fb61a38b5012d0ab149b62054d02c1c72f",
+  "license": "MIT",
+  "electron": "45.3.2",
+  "copiedFiles": [
+    {
+      "source": "apps/desktop/src/styles/tokens.css",
+      "local": "src/desktop/renderer/upstream/tokens.css",
+      "sha256": "c98fced64c5cf0b5abf93b4c5b3ec597ce07af59711de86fa2e4c808a793fdbd"
+    },
+    {
+      "source": "apps/desktop/src/ui/pane-resize-handle.tsx",
+      "local": "src/desktop/renderer/upstream/pane-resize-handle.tsx",
+      "sha256": "44a620c4ced37a7c86f4edac5c5f4fa29ec64685a71fd0573234f8ba2c89f6e2"
+    }
+  ],
+  "adaptedSources": [
+    "apps/desktop/src/styles/base.css",
+    "apps/desktop/src/styles/sidebar.css",
+    "apps/desktop/src/styles/main.css",
+    "apps/desktop/src/styles/topbar.css",
+    "apps/desktop/src/features/conversation/composer-surface.tsx"
+  ]
+}

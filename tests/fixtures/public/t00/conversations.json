@@ -1,0 +1,37 @@
+{
+  "fixture_kind": "synthetic_conversation_and_state",
+  "warning": "预先编写的对话和旧回答，仅作测试输入；不是模型运行结果。不得整份导入知识库。",
+  "conversations": [
+    {
+      "id": "CHAT-ORDINARY",
+      "source_sample_ids": ["F06"],
+      "messages": [
+        {"id": "u1", "role": "user", "text": "蓝色工具箱在哪，什么时候交接？"},
+        {"id": "a1", "role": "assistant", "text": "按交接聊天，蓝色工具箱暂在北柜第二层，周五15:00前交给复核员。", "source_anchor": "F06 的09:10与09:12两条消息"}
+      ],
+      "expected": "可以保留正式聊天历史，但不能仅因普通问答而新增知识库笔记。"
+    },
+    {
+      "id": "CHAT-SAVE-SELECTED",
+      "extends": "CHAT-ORDINARY",
+      "messages": [
+        {"id": "u2", "role": "user", "text": "红色工具箱在哪？"},
+        {"id": "a2", "role": "assistant", "text": "聊天记录说位置尚未确认。", "source_anchor": "F06 的09:14消息"},
+        {"id": "u3", "role": "user", "text": "把刚才关于蓝色工具箱的那条回答保存到知识库，只保存我选中的这一条。", "selected_answer_ids": ["a1"]}
+      ],
+      "expected_saved_answer_ids": ["a1"],
+      "required_labels": ["AI整理", "原聊天资料来源", "保存时间"],
+      "excluded_answer_ids": ["a2"]
+    },
+    {
+      "id": "OLD-ANSWER",
+      "source_sample_ids": ["F15"],
+      "messages": [
+        {"id": "old-u1", "role": "user", "text": "每周什么时候巡检？"},
+        {"id": "old-a1", "role": "assistant", "text": "根据当时版本，例行巡检在每周二09:00。", "source_anchor": "F15 例行巡检安排", "citation_status": "valid_before_change"}
+      ],
+      "expected_after_change": "历史内容可以保留，但旧引用必须显露变化或失效；不能把旧答案当作新版依据。"
+    }
+  ],
+  "application_test_status": "not_run"
+}

@@ -1,0 +1,6 @@
+# Keep public document fixtures byte-for-byte intact and out of text diffs.
+*.pdf binary
+*.doc binary
+*.docx binary
+*.xls binary
+*.xlsx binary

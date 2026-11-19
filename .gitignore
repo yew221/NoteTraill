@@ -1,0 +1,61 @@
+# Local private samples and generated run outputs.
+/outputs/
+/tests/fixtures/private/
+/private/
+/data/
+/vault/
+/vaults/
+/backups/
+
+# Local credentials and per-user application configuration.
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+.npmrc
+.netrc
+.pypirc
+.pi/
+.obsidian/
+auth.json
+credentials.json
+secrets.json
+*.pem
+*.key
+*.p8
+*.p12
+*.pfx
+
+# Local databases, session transcripts, logs and process state.
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+*.jsonl
+*.log
+*.pid
+.notetrail-lock*
+
+# Python verification caches.
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+
+# Project-local dependencies and caches.
+node_modules/
+.cache/
+*.tsbuildinfo
+
+# Rebuildable application bundles and local release artifacts.
+dist/
+release/
+*.app/
+*.dmg
+
+# macOS directory metadata.
+.DS_Store
+._*

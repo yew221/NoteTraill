@@ -1,0 +1,237 @@
+# 锁定依赖许可清单
+
+2026-11-18，在 macOS arm64 上核对冻结安装的 package.json 与 Python 包元数据。Node 24.22.1 的可执行文件和许可证从 node-bin-darwin-arm64 重封装归档取得，两项 SHA-256 分别与 Node 官方同版本归档的原件相符。应用依赖按两份 pnpm 锁及 SHA-512 恢复。Electron 分发 ZIP 的 SHA-256 来自锁定版本的 checksums.json。pnpm 11.25.0 用于维护者的冻结安装、核对和审计。
+
+## JavaScript（当前平台，187 个包）
+
+| 包 | 版本 | 声明许可 | 附带许可文件数 |
+| --- | --- | --- | --- |
+| @anthropic-ai/sdk | 0.129.0 | MIT | 1 |
+| @aws-sdk/client-bedrock-runtime | 3.1127.0 | Apache-2.0 | 1 |
+| @aws-sdk/core | 3.981.0 | Apache-2.0 | 1 |
+| @aws-sdk/credential-provider-env | 3.972.84 | Apache-2.0 | 1 |
+| @aws-sdk/credential-provider-http | 3.972.86 | Apache-2.0 | 0 |
+| @aws-sdk/credential-provider-ini | 3.973.29 | Apache-2.0 | 1 |
+| @aws-sdk/credential-provider-login | 3.972.91 | Apache-2.0 | 0 |
+| @aws-sdk/credential-provider-node | 3.972.96 | Apache-2.0 | 1 |
+| @aws-sdk/credential-provider-process | 3.972.84 | Apache-2.0 | 1 |
+| @aws-sdk/credential-provider-sso | 3.973.28 | Apache-2.0 | 1 |
+| @aws-sdk/credential-provider-web-identity | 3.972.90 | Apache-2.0 | 1 |
+| @aws-sdk/eventstream-handler-node | 3.972.42 | Apache-2.0 | 1 |
+| @aws-sdk/middleware-eventstream | 3.972.38 | Apache-2.0 | 1 |
+| @aws-sdk/middleware-websocket | 3.972.66 | Apache-2.0 | 1 |
+| @aws-sdk/nested-clients | 3.998.3 | Apache-2.0 | 0 |
+| @aws-sdk/signature-v4-multi-region | 3.996.52 | Apache-2.0 | 1 |
+| @aws-sdk/token-providers | 3.1127.0 | Apache-2.0 | 1 |
+| @aws-sdk/token-providers | 3.1166.0 | Apache-2.0 | 1 |
+| @aws-sdk/types | 3.975.1 | Apache-2.0 | 1 |
+| @aws-sdk/xml-builder | 3.972.43 | Apache-2.0 | 1 |
+| @aws/lambda-invoke-store | 0.3.0 | Apache-2.0 | 1 |
+| @babel/runtime | 7.29.13 | MIT | 1 |
+| @earendil-works/pi-agent-core | 1.5.2 | MIT | 0 |
+| @earendil-works/pi-ai | 1.5.2 | MIT | 0 |
+| @earendil-works/pi-codemode | 1.5.2 | MIT | 0 |
+| @earendil-works/pi-coding-agent | 1.5.2 | MIT | 0 |
+| @earendil-works/pi-mcp | 1.5.2 | MIT | 0 |
+| @earendil-works/pi-schema | 1.5.2 | MIT | 0 |
+| @earendil-works/pi-telemetry | 1.5.2 | MIT | 0 |
+| @earendil-works/pi-tui | 1.5.2 | MIT | 0 |
+| @fastify/ajv-compiler | 4.0.7 | MIT | 1 |
+| @fastify/deepmerge | 3.2.4 | MIT | 1 |
+| @fastify/error | 4.2.1 | MIT | 1 |
+| @fastify/fast-json-stringify-compiler | 5.1.1 | MIT | 1 |
+| @fastify/forwarded | 3.1.2 | MIT | 1 |
+| @fastify/merge-json-schemas | 0.2.2 | MIT | 1 |
+| @fastify/proxy-addr | 5.1.2 | MIT | 1 |
+| @google/genai | 2.21.0 | Apache-2.0 | 1 |
+| @isaacs/nonrecursive-glob-match | 1.1.0 | BlueOak-1.0.0 | 1 |
+| @oxc-project/types | 0.156.0 | MIT | 1 |
+| @pinojs/redact | 0.4.0 | MIT | 1 |
+| @protobufjs/aspromise | 1.1.2 | BSD-3-Clause | 1 |
+| @protobufjs/base64 | 1.1.2 | BSD-3-Clause | 1 |
+| @protobufjs/codegen | 2.0.5 | BSD-3-Clause | 1 |
+| @protobufjs/eventemitter | 1.1.1 | BSD-3-Clause | 1 |
+| @protobufjs/fetch | 1.1.1 | BSD-3-Clause | 1 |
+| @protobufjs/float | 1.0.2 | BSD-3-Clause | 1 |
+| @protobufjs/path | 1.1.2 | BSD-3-Clause | 1 |
+| @protobufjs/pool | 1.1.0 | BSD-3-Clause | 1 |
+| @protobufjs/utf8 | 1.1.2 | BSD-3-Clause | 1 |
+| @rolldown/binding-darwin-arm64 | 1.2.19 | MIT | 0 |
+| @rolldown/pluginutils | 1.1.0 | MIT | 1 |
+| @silvia-odwyer/photon-node | 0.3.4 | Apache-2.0 | 1 |
+| @smithy/core | 3.40.0 | Apache-2.0 | 1 |
+| @smithy/credential-provider-imds | 4.5.2 | Apache-2.0 | 1 |
+| @smithy/fetch-http-handler | 5.8.1 | Apache-2.0 | 1 |
+| @smithy/node-http-handler | 4.12.1 | Apache-2.0 | 1 |
+| @smithy/node-http-handler | 4.14.2 | Apache-2.0 | 1 |
+| @smithy/signature-v4 | 5.7.5 | Apache-2.0 | 1 |
+| @smithy/types | 4.20.0 | Apache-2.0 | 1 |
+| @stablelib/base64 | 1.0.1 | MIT | 1 |
+| @types/node | 24.10.0 | MIT | 1 |
+| @types/node | 26.6.6 | MIT | 1 |
+| @types/react | 19.3.0 | MIT | 1 |
+| @types/react-dom | 19.3.0 | MIT | 1 |
+| @types/retry | 0.12.0 | MIT | 1 |
+| abstract-logging | 2.0.1 | MIT | 0 |
+| agent-base | 7.1.4 | MIT | 1 |
+| agent-base | 9.0.0 | MIT | 1 |
+| ajv | 8.20.0 | MIT | 1 |
+| ajv-formats | 3.0.1 | MIT | 1 |
+| atomic-sleep | 1.0.0 | MIT | 1 |
+| avvio | 9.3.1 | MIT | 1 |
+| balanced-match | 4.0.4 | MIT | 1 |
+| base64-js | 1.5.1 | MIT | 1 |
+| better-sqlite3 | 13.1.1 | MIT | 1 |
+| bignumber.js | 9.3.1 | MIT | 1 |
+| bowser | 2.15.0 | MIT | 1 |
+| brace-expansion | 5.0.12 | MIT | 1 |
+| buffer-equal-constant-time | 1.0.1 | BSD-3-Clause | 1 |
+| chalk | 6.0.0 | MIT | 1 |
+| cookie | 2.0.2 | MIT | 1 |
+| cross-spawn | 7.0.6 | MIT | 1 |
+| csstype | 3.2.3 | MIT | 1 |
+| data-uri-to-buffer | 4.0.1 | MIT | 0 |
+| debug | 4.4.3 | MIT | 1 |
+| dequal | 2.0.3 | MIT | 1 |
+| detect-libc | 2.1.2 | Apache-2.0 | 1 |
+| diff | 8.0.4 | BSD-3-Clause | 1 |
+| ecdsa-sig-formatter | 1.0.11 | Apache-2.0 | 1 |
+| extend | 3.0.2 | MIT | 1 |
+| fast-decode-uri-component | 1.0.1 | MIT | 1 |
+| fast-deep-equal | 3.1.3 | MIT | 1 |
+| fast-json-stringify | 7.3.5 | MIT | 1 |
+| fast-querystring | 1.1.2 | MIT | 1 |
+| fast-sha256 | 1.3.0 | Unlicense | 1 |
+| fast-uri | 4.2.3 | BSD-3-Clause | 1 |
+| fast-uri | 3.1.9 | BSD-3-Clause | 1 |
+| fastify | 5.12.8 | MIT | 1 |
+| fastq | 1.20.3 | ISC | 1 |
+| fetch-blob | 3.2.0 | MIT | 1 |
+| find-my-way | 9.10.0 | MIT | 1 |
+| formdata-polyfill | 4.0.10 | MIT | 1 |
+| gaxios | 7.3.1 | Apache-2.0 | 1 |
+| gcp-metadata | 8.1.2 | Apache-2.0 | 1 |
+| get-east-asian-width | 1.6.0 | MIT | 1 |
+| google-auth-library | 10.9.1 | Apache-2.0 | 1 |
+| google-logging-utils | 1.1.3 | Apache-2.0 | 1 |
+| graceful-fs | 4.2.11 | ISC | 1 |
+| highlight.js | 10.7.3 | BSD-3-Clause | 1 |
+| hosted-git-info | 9.0.3 | ISC | 1 |
+| http-proxy-agent | 9.1.0 | MIT | 1 |
+| https-proxy-agent | 9.1.0 | MIT | 1 |
+| https-proxy-agent | 7.0.6 | MIT | 1 |
+| ignore | 7.0.8 | MIT | 1 |
+| ipaddr.js | 2.5.0 | MIT | 1 |
+| isexe | 2.0.0 | ISC | 1 |
+| jiti | 2.7.0 | MIT | 1 |
+| json-bigint | 1.0.0 | MIT | 1 |
+| json-schema-ref-resolver | 3.0.1 | MIT | 1 |
+| json-schema-to-ts | 3.1.1 | MIT | 1 |
+| json-schema-traverse | 1.0.0 | MIT | 1 |
+| jwa | 2.0.1 | MIT | 1 |
+| jws | 4.0.1 | MIT | 1 |
+| light-my-request | 6.8.0 | BSD-3-Clause | 1 |
+| lightningcss | 1.33.0 | MPL-2.0 | 1 |
+| lightningcss-darwin-arm64 | 1.33.0 | MPL-2.0 | 1 |
+| long | 5.3.2 | Apache-2.0 | 1 |
+| lovely-mermaid | 0.3.3 | Apache-2.0 | 1 |
+| lru-cache | 11.5.3 | BlueOak-1.0.0 | 1 |
+| marked | 18.0.11 | MIT | 1 |
+| marked-cjk-friendly | 0.1.2 | MIT | 1 |
+| minimatch | 11.0.3 | BlueOak-1.0.0 | 1 |
+| ms | 2.1.3 | MIT | 1 |
+| node-addon-api | 8.9.2 | MIT | 1 |
+| node-domexception | 1.0.0 | MIT | 1 |
+| node-fetch | 3.3.2 | MIT | 1 |
+| on-exit-leak-free | 2.1.2 | MIT | 1 |
+| openai | 7.19.0 | Apache-2.0 | 1 |
+| p-retry | 4.6.2 | MIT | 1 |
+| partial-json | 0.1.7 | MIT | 1 |
+| path-key | 3.1.1 | MIT | 1 |
+| pino | 10.4.0 | MIT | 1 |
+| pino-abstract-transport | 3.0.0 | MIT | 1 |
+| pino-std-serializers | 7.1.0 | MIT | 1 |
+| process-warning | 5.1.1 | MIT | 1 |
+| proper-lockfile | 4.1.2 | MIT | 1 |
+| protobufjs | 7.6.6 | BSD-3-Clause | 1 |
+| proxy-agent-negotiate | 1.1.0 | MIT | 0 |
+| quick-format-unescaped | 4.0.4 | MIT | 1 |
+| quickjs-wasi | 3.6.2 | MIT | 1 |
+| react | 19.3.1 | MIT | 1 |
+| react-dom | 19.3.1 | MIT | 1 |
+| real-require | 1.0.0 | MIT | 1 |
+| require-from-string | 2.0.2 | MIT | 1 |
+| ret | 0.5.1 | MIT | 1 |
+| retry | 0.13.1 | MIT | 1 |
+| retry | 0.12.0 | MIT | 1 |
+| reusify | 1.1.0 | MIT | 1 |
+| rfdc | 1.4.1 | MIT | 1 |
+| rolldown | 1.2.19 | MIT | 1 |
+| safe-buffer | 5.2.1 | MIT | 1 |
+| safe-regex2 | 5.1.2 | MIT | 1 |
+| safe-stable-stringify | 2.5.0 | MIT | 1 |
+| scheduler | 0.28.0 | MIT | 1 |
+| secure-json-parse | 4.1.1 | BSD-3-Clause | 1 |
+| semver | 7.8.5 | ISC | 1 |
+| set-cookie-parser | 3.2.2 | MIT | 1 |
+| shebang-command | 2.0.0 | MIT | 1 |
+| shebang-regex | 3.0.0 | MIT | 1 |
+| signal-exit | 3.0.7 | ISC | 1 |
+| sonic-boom | 4.2.1 | MIT | 1 |
+| split2 | 4.2.0 | ISC | 1 |
+| standardwebhooks | 1.1.1 | MIT | 0 |
+| thread-stream | 4.2.1 | MIT | 1 |
+| toad-cache | 3.7.4 | MIT | 1 |
+| ts-algebra | 2.0.0 | MIT | 1 |
+| tslib | 2.9.1 | 0BSD | 1 |
+| typebox | 1.3.27 | MIT | 1 |
+| typescript | 6.0.3 | Apache-2.0 | 1 |
+| undici | 8.12.3 | MIT | 1 |
+| undici-types | 7.16.0 | MIT | 1 |
+| undici-types | 8.9.0 | MIT | 1 |
+| web-streams-polyfill | 3.3.3 | MIT | 1 |
+| which | 2.0.2 | ISC | 1 |
+| ws | 8.22.2 | MIT | 1 |
+| yaml | 2.9.0 | ISC | 1 |
+
+## Python（35 个包）
+
+| 包 | 版本 | 声明许可 | 附带许可文件数 |
+| --- | --- | --- | --- |
+| beautifulsoup4 | 4.15.0 | MIT License | 2 |
+| certifi | 2026.10.23 | MPL-2.0 | 1 |
+| cffi | 2.1.1 | MIT-0 | 1 |
+| charset-normalizer | 3.5.2 | MIT | 1 |
+| click | 8.5.1 | BSD-3-Clause | 1 |
+| cobble | 0.1.4 | License :: OSI Approved :: BSD License | 0 |
+| cryptography | 50.0.2 | Apache-2.0 OR BSD-3-Clause | 3 |
+| defusedxml | 0.7.1 | PSFL | 1 |
+| et-xmlfile | 2.0.0 | MIT | 0 |
+| flatbuffers | 25.12.19 | Apache 2.0 | 0 |
+| idna | 3.20 | BSD-3-Clause | 1 |
+| lxml | 6.1.3 | BSD-3-Clause | 2 |
+| magika | 1.0.3 | Apache-2.0 | 0 |
+| mammoth | 1.13.0 | BSD-2-Clause | 1 |
+| markdownify | 1.2.3 | License :: OSI Approved :: MIT License | 1 |
+| markitdown | 0.1.9 | MIT | 0 |
+| numpy | 2.5.4 | BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0 | 20 |
+| onnxruntime | 1.31.1 | MIT License | 1 |
+| openpyxl | 3.1.5 | MIT | 0 |
+| packaging | 26.3 | Apache-2.0 OR BSD-2-Clause | 5 |
+| pandas | 3.1.1 | BSD-3-Clause | 19 |
+| pdfminer-six | 20260107 | MIT | 1 |
+| pdfplumber | 0.11.10 | License :: OSI Approved :: MIT License | 1 |
+| pillow | 13.0.0 | MIT-CMU | 1 |
+| protobuf | 7.36.2 | 3-Clause BSD License | 1 |
+| pycparser | 3.12 | BSD-3-Clause | 1 |
+| pypdfium2 | 5.15.2 | BSD-3-Clause, Apache-2.0, dependency licenses | 37 |
+| python-dateutil | 4.0.0 | BSD-3-Clause | 2 |
+| requests | 2.34.2 | Apache-2.0 | 2 |
+| six | 1.17.0 | MIT | 1 |
+| soupsieve | 4.0.1 | MIT | 1 |
+| typing-extensions | 4.16.0 | PSF-2.0 | 1 |
+| tzdata | 2026.6 | Apache-2.0 | 2 |
+| urllib3 | 2.8.0 | MIT | 1 |
+| xlrd | 2.0.2 | BSD | 1 |
+
+未发现缺失的许可声明。16 个 JS 包和 6 个 Python 包的本地分发元数据中未找到独立许可文件；不等于其没有许可证。正式分发依赖二进制包之前，应补齐对应版本上游许可及归属文本，尤其是附带原生组件的包。当前候选包仅分发项目源码，不捆绑 node_modules、Python wheels 或运行环境。

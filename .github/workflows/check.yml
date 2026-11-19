@@ -1,0 +1,96 @@
+name: Check
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: check-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  macos:
+    runs-on: macos-26
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
+        with:
+          node-version-file: package.json
+          package-manager-cache: false
+      - name: Restore the locked Python
+        id: python
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(uname -sm)" = "Darwin arm64"
+          lock=scripts/runtime-lock.json
+          version=$(/usr/bin/plutil -extract python.version raw -o - "$lock")
+          url=$(/usr/bin/plutil -extract python.url raw -o - "$lock")
+          sha256=$(/usr/bin/plutil -extract python.sha256 raw -o - "$lock")
+          [[ "$url" == https://github.com/astral-sh/python-build-standalone/releases/download/* ]]
+          [[ "$sha256" =~ ^[0-9a-f]{64}$ ]]
+          root=$(mktemp -d "$RUNNER_TEMP/notetrail-python.XXXXXXXX")
+          archive="$root/python.tar.gz"
+          curl -q --proto '=https' --proto-redir '=https' --fail --location --silent --show-error \
+            --retry 3 --retry-all-errors --retry-max-time 300 --connect-timeout 15 --max-time 180 \
+            --max-filesize 268435456 "$url" -o "$archive"
+          printf '%s  %s\n' "$sha256" "$archive" | shasum -a 256 -c -
+          mkdir "$root/runtime"
+          tar -xf "$archive" -C "$root/runtime" --strip-components 1
+          python="$root/runtime/bin/python3"
+          "$python" -I -B - "$version" <<'PYTHON'
+          import platform
+          import sys
+
+          actual = (platform.python_version(), platform.machine())
+          expected = (sys.argv[1], "arm64")
+          if actual != expected:
+              raise SystemExit(f"Expected locked Python {expected}, found {actual}")
+          print(f"Verified Python {actual[0]} ({actual[1]})")
+          PYTHON
+          "$python" -I -B -m venv "$root/venv"
+          echo "$root/venv/bin" >> "$GITHUB_PATH"
+          echo "python-path=$root/venv/bin/python" >> "$GITHUB_OUTPUT"
+      - name: Install locked pnpm
+        run: npm install --global pnpm@11.25.0 --ignore-scripts
+      - name: Restore locked project dependencies
+        run: pnpm install --frozen-lockfile --ignore-scripts
+      - name: Restore locked desktop dependencies
+        run: pnpm --dir desktop --ignore-workspace install --frozen-lockfile --ignore-scripts
+      - name: Verify installer layout against both frozen installs
+        run: python scripts/freeze-js.py
+      - name: Restore tested conversion dependencies
+        run: |
+          python -m pip install --require-hashes --only-binary :all: --requirement scripts/conversion-requirements-hashed.lock
+      - name: Restore the locked ripgrep
+        run: |
+          mkdir -p "$RUNNER_TEMP/notetrail-rg"
+          archive="$RUNNER_TEMP/notetrail-rg/download"
+          url=$(/usr/bin/plutil -extract rg.url raw -o - scripts/runtime-lock.json)
+          expected=$(/usr/bin/plutil -extract rg.sha256 raw -o - scripts/runtime-lock.json)
+          curl -q --proto '=https' --proto-redir '=https' --fail --location --retry 2 "$url" -o "$archive"
+          test "$(shasum -a 256 "$archive" | awk '{print $1}')" = "$expected"
+          tar -xf "$archive" -C "$RUNNER_TEMP/notetrail-rg" --strip-components 1
+          "$RUNNER_TEMP/notetrail-rg/rg" --version
+          echo "NOTETRAIL_RG=$RUNNER_TEMP/notetrail-rg/rg" >> "$GITHUB_ENV"
+      - name: Build and run offline checks
+        env:
+          NOTETRAIL_PYTHON: ${{ steps.python.outputs.python-path }}
+        run: pnpm check
+      - name: Check conversion verifier
+        run: python -B -m unittest discover -s tests -p 'test_verify_conversion.py' -v
+      - name: Check frozen installer
+        run: python -B -m unittest discover -s tests -p 'test_js_restore.py' -v
+      - name: Audit application and desktop dependency locks
+        run: |
+          pnpm audit --audit-level high
+          pnpm --dir desktop --ignore-workspace audit --audit-level high
+      - name: Check source candidate privacy and desktop inputs
+        run: node scripts/package-source.mjs "$RUNNER_TEMP/notetrail-source-candidate"

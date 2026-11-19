@@ -1,0 +1,9 @@
+{
+  "fixture_kind": "simulated_http_responses",
+  "warning": "以下仅为静态响应数据，没有发起对应网络请求；不得记为真实接入结果。保留域名 .invalid，不访问它。",
+  "responses": [
+    {"id": "HTTP-403", "url": "https://fixture.invalid/denied", "status": 403, "headers": {"content-type": "text/plain; charset=utf-8"}, "body": "访问被拒绝。此内容为虚构失败响应。", "expected": "显示获取失败，不登记为可问答资料。"},
+    {"id": "HTTP-404", "url": "https://fixture.invalid/missing", "status": 404, "headers": {"content-type": "text/plain; charset=utf-8"}, "body": "页面不存在。此内容为虚构失败响应。", "expected": "显示页面不存在，不用错误页正文冒充资料正文。"}
+  ],
+  "application_test_status": "not_run"
+}

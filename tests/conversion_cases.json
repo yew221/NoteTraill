@@ -1,0 +1,40 @@
+{
+  "scope": "T01-A fixed public fixtures only; checks are not supplied to MarkItDown",
+  "cases": [
+    {
+      "id": "F07", "path": "inputs/formats/inspection.pdf", "expectation": "complete",
+      "contains": ["松岚实验站巡检说明", "每周三14:30", "A组滤网每14天", "B组每21天", "摄氏度", "待复查不等于已经判定故障"],
+      "rows": [["设备编号", "温度", "状态"], ["SL-A01", "24", "合格"], ["SL-B02", "29", "待复查"]]
+    },
+    {
+      "id": "F08", "path": "inputs/formats/inspection.docx", "expectation": "complete",
+      "contains": ["松岚实验站巡检说明", "每周三14:30", "A组滤网每14天", "B组每21天", "摄氏度", "待复查不等于已经判定故障"],
+      "rows": [["设备编号", "温度", "状态"], ["SL-A01", "24", "合格"], ["SL-B02", "29", "待复查"]]
+    },
+    {
+      "id": "F09", "path": "inputs/formats/stock.xlsx", "expectation": "complete",
+      "contains": ["松岚实验站备件记录", "数量单位为件"],
+      "sheets": {
+        "东区": [["记录编号", "物料名称", "数量（件）", "状态"], ["E-01", "滤网", "12", "已复核"], ["E-02", "密封圈", "5", "待复核"]],
+        "西区": [["记录编号", "物料名称", "数量（件）", "状态"], ["W-01", "滤网", "7", "待复核"], ["W-02", "密封圈", "9", "已复核"]]
+      }
+    },
+    {
+      "id": "F10", "path": "inputs/formats/stock.xls", "expectation": "complete",
+      "contains": ["松岚实验站备件记录", "数量单位为件"],
+      "sheets": {
+        "东区": [["记录编号", "物料名称", "数量（件）", "状态"], ["E-01", "滤网", "12", "已复核"], ["E-02", "密封圈", "5", "待复核"]],
+        "西区": [["记录编号", "物料名称", "数量（件）", "状态"], ["W-01", "滤网", "7", "待复核"], ["W-02", "密封圈", "9", "已复核"]]
+      }
+    },
+    {"id": "F11", "path": "inputs/formats/scanned.pdf", "expectation": "empty"},
+    {"id": "F12", "path": "inputs/formats/inspection.doc", "expectation": "unsupported"},
+    {"id": "F13", "path": "inputs/formats/corrupt.docx", "expectation": "rejected_corrupt"},
+    {
+      "id": "F14", "path": "inputs/formats/mixed.pdf", "expectation": "known_partial",
+      "contains": ["正文记录数量为8"],
+      "unread_image_truth": ["SN-07", "核验数量：17", "橙色"],
+      "warning": "固定样本第2页是图像，真值来自T00人工核对；partial是本验证器的比对结论，不是MarkItDown自动检测到所有遗漏。"
+    }
+  ]
+}

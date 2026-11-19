@@ -1,0 +1,7 @@
+# pnpm 11.25.0 recorded this exact pin during the T01-E install on 2026-11-12.
+# Official release/npm metadata reviewed; no wildcard or global release-age change.
+minimumReleaseAgeExclude:
+  - better-sqlite3@13.1.1
+
+# Running checks must not implicitly reinstall dependencies.
+verifyDepsBeforeRun: error
