@@ -43,6 +43,7 @@ if (!app.requestSingleInstanceLock()) {
   process.on('SIGINT', () => app.quit());
   // Do not hold ESM module evaluation open while waiting for Electron's ready event.
   void app.whenReady().then(async () => {
+    if (!app.isPackaged) app.dock?.setIcon(path.join(root, 'desktop/notetrail-dock.png'));
     const renderer = path.join(root, 'dist/desktop');
     protocol.handle('notetrail', request => {
       const file = assetPath(request.url, renderer);

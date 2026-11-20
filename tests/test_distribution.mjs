@@ -65,7 +65,7 @@ test('source package includes the desktop build and verification chain with one 
   const source = sourceInventory(fs.realpathSync(process.cwd()));
   const desktop = JSON.parse(fs.readFileSync('desktop/package.json'));
   assert.equal(source.version, desktop.version);
-  for (const file of ['desktop/package.json', 'desktop/pnpm-lock.yaml', 'desktop/icon.swift', 'desktop/entitlements.plist',
+  for (const file of ['desktop/package.json', 'desktop/pnpm-lock.yaml', 'desktop/notetrail.icns', 'desktop/notetrail-dock.png', 'desktop/entitlements.plist',
     'scripts/build-desktop.mjs', 'scripts/build-renderer.mjs', 'scripts/js-install-lock.json', 'scripts/restore-js.py',
     'scripts/desktop-backend.mjs', 'scripts/package-desktop.mjs', 'scripts/verify-desktop.mjs',
     'src/server/conversion-parser.py', 'src/server/conversion-sandbox.ts', 'src/desktop/renderer/tsconfig.json']) assert(source.files[file], file);

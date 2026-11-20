@@ -9,7 +9,8 @@ import { pathToFileURL } from 'node:url';
 const MARKER = 'NoteTrail managed installation v1\n';
 const SOURCE = ['package.json', 'pnpm-lock.yaml', 'pnpm-workspace.yaml', 'tsconfig.server.json', 'LICENSE', 'THIRD_PARTY_NOTICES.md', 'DEPENDENCIES.md', 'src',
   'desktop/PI_GUI_LICENSE', 'desktop/package.json', 'desktop/pnpm-lock.yaml', 'desktop/README.md', 'desktop/upstream.json',
-  'desktop/entitlements.plist', 'desktop/icon.swift', 'WEB_SEARCH.md', 'RELEASE_CHECKLIST.md', 'READINESS_REPAIR.md', 'LIVING_ANSWERS.md',
+  'desktop/entitlements.plist', 'desktop/notetrail.icns', 'desktop/notetrail-dock.png',
+  'WEB_SEARCH.md', 'RELEASE_CHECKLIST.md', 'READINESS_REPAIR.md', 'LIVING_ANSWERS.md',
   'scripts/build.mjs', 'scripts/build-renderer.mjs', 'scripts/stop.mjs', 'scripts/maintenance.mjs', 'scripts/distribution.mjs',
   'scripts/restore-js.py', 'scripts/freeze-js.py', 'scripts/js-install-lock.json',
   'scripts/verify_pi.mjs',

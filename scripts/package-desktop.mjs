@@ -117,11 +117,7 @@ export function packageDesktop({ prefix, destination, identity = '-' }) {
     fs.renameSync(path.join(helper, 'Contents/MacOS', oldName), path.join(helper, 'Contents/MacOS', newName));
     fs.renameSync(helper, path.join(contents, 'Frameworks', newName + '.app'));
   }
-  const iconset = path.join(path.dirname(destination), '.notetrail.iconset');
-  if (fs.existsSync(iconset)) fail('ICON_WORKSPACE_EXISTS');
-  run('/usr/bin/xcrun', ['swift', path.join(root, 'desktop/icon.swift'), iconset]);
-  run('/usr/bin/iconutil', ['-c', 'icns', '-o', path.join(resources, 'notetrail.icns'), iconset]);
-  fs.rmSync(iconset, { recursive: true });
+  copy(path.join(root, 'desktop/notetrail.icns'), path.join(resources, 'notetrail.icns'));
   write(path.join(app, 'desktop-build.json'), { format: 'notetrail-desktop-v1', version: desktop.version, electron: desktop.devDependencies.electron,
     platform: lock.support, signing: identity === '-' ? 'ad-hoc-local-only' : 'developer-id', source: digest(JSON.stringify(inventory(path.join(root, 'src')))) });
   // Check relocation before signing; no bundled symlink may depend on a development machine.
